@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://6dk364wmsopt"]
+
+[ext_resource type="Texture2D" uid="uid://d36ou0s72q77c" path="res://Assets/Environments/SunnyLand/Layers/back.png" id="1_dtgvv"]
+
+[node name="BG" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(768, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+modulate = Color(0.93359375, 0.93359375, 0.93359375, 1)
+position = Vector2(384, 240)
+scale = Vector2(2, 2)
+texture = ExtResource("1_dtgvv")

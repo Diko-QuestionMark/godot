@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwq4g43uhawc6"]
+
+[ext_resource type="Texture2D" uid="uid://4nyah5753xwv" path="res://Assets/Environments/SunnyLand/Props/platform-biglong.png" id="1_ypuya"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oitdi"]
+size = Vector2(64, 16)
+
+[node name="MPlatform1" type="AnimatableBody2D" groups=["Mplatform"]]
+
+[node name="PlatformBiglong" type="Sprite2D" parent="."]
+position = Vector2(32, 8)
+texture = ExtResource("1_ypuya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, 8)
+shape = SubResource("RectangleShape2D_oitdi")

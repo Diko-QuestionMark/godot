@@ -1,0 +1,448 @@
+[gd_scene load_steps=18 format=3 uid="uid://b4t8w4m1mkrm7"]
+
+[ext_resource type="Texture2D" uid="uid://cruw1sh7lmqly" path="res://Assets/Characters/Players/Squirrel/idle/spritesheet.png" id="1_1o87n"]
+[ext_resource type="Script" uid="uid://daml7x6dxarhk" path="res://Prefabs/Tono/tono.gd" id="1_rans1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rans1"]
+atlas = ExtResource("1_1o87n")
+region = Rect2(0, 0, 90, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6w7r"]
+atlas = ExtResource("1_1o87n")
+region = Rect2(90, 0, 90, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si42v"]
+atlas = ExtResource("1_1o87n")
+region = Rect2(180, 0, 90, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h3ft"]
+atlas = ExtResource("1_1o87n")
+region = Rect2(270, 0, 90, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk71u"]
+atlas = ExtResource("1_1o87n")
+region = Rect2(360, 0, 90, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exwob"]
+atlas = ExtResource("1_1o87n")
+region = Rect2(450, 0, 90, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e51d5"]
+atlas = ExtResource("1_1o87n")
+region = Rect2(540, 0, 90, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf3ug"]
+atlas = ExtResource("1_1o87n")
+region = Rect2(630, 0, 90, 58)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grmdx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rans1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6w7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si42v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h3ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hk71u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exwob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e51d5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rf3ug")
+}],
+"loop": true,
+"name": &"bergerak",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e6w7r"]
+radius = 69.0
+
+[sub_resource type="Animation" id="Animation_e6w7r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("Dialog1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("Dialog2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("Dialog3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/path = NodePath("Dialoga1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/path = NodePath("Dialoga2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/path = NodePath("Dialoga3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6.5, 9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = false
+tracks/6/path = NodePath("Dialoga4:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Dialoga5:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Dialoga6:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_si42v"]
+resource_name = "have mushroom"
+length = 16.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialoga1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialoga2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(5, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dialoga3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(10, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Dialoga4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(13.5, 15.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7h3ft"]
+resource_name = "final"
+length = 9.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialoga5:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialoga6:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(6, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_rans1"]
+resource_name = "gak_punya_mushroom"
+length = 12.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialog1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialog2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.5, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dialog3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(10, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_si42v"]
+_data = {
+&"RESET": SubResource("Animation_e6w7r"),
+&"final": SubResource("Animation_7h3ft"),
+&"gak_punya_mushroom": SubResource("Animation_rans1"),
+&"have mushroom": SubResource("Animation_si42v")
+}
+
+[node name="Tono" type="Node2D"]
+script = ExtResource("1_rans1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -19)
+sprite_frames = SubResource("SpriteFrames_grmdx")
+animation = &"bergerak"
+
+[node name="DeteksiPlayer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeteksiPlayer"]
+position = Vector2(-2, -12)
+shape = SubResource("CircleShape2D_e6w7r")
+
+[node name="Dialog1" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -124.0
+offset_top = -56.0
+offset_right = 125.0
+offset_bottom = -33.0
+theme_override_constants/outline_size = 4
+text = "Tolong, saya tidak bisa bergerak"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialog2" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -150.0
+offset_top = -81.0
+offset_right = 151.0
+offset_bottom = -32.0
+theme_override_constants/outline_size = 4
+text = "Bisakah anda memberikan saya jamur 
+ajaib yang berada di akhir level 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialog3" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -124.0
+offset_top = -55.0
+offset_right = 125.0
+offset_bottom = -32.0
+theme_override_constants/outline_size = 4
+text = "Pliss"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_si42v")
+}
+autoplay = "RESET"
+
+[node name="Dialoga1" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -252.0
+offset_top = -83.0
+offset_right = 253.0
+offset_bottom = -34.0
+theme_override_constants/outline_size = 4
+text = "Akhirnya aku bisa begerak lagi
+ berkat jamur yang kamu bawakan"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialoga2" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -220.0
+offset_top = -83.0
+offset_right = 221.0
+offset_bottom = -34.0
+theme_override_constants/outline_size = 4
+text = "Oleh karena itu, Saya akan membacakanmu sebuah rapalan sihir kuno"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Dialoga3" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -124.0
+offset_top = -69.0
+offset_right = 125.0
+offset_bottom = -46.0
+theme_override_constants/outline_size = 4
+text = "agar kamu bisa Double Jump"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialoga4" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -124.0
+offset_top = -69.0
+offset_right = 125.0
+offset_bottom = -46.0
+theme_override_constants/outline_size = 4
+text = "#$&#*$*^#(#)*$)@%$(*"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialoga5" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -165.0
+offset_top = -69.0
+offset_right = 165.0
+offset_bottom = -46.0
+theme_override_constants/outline_size = 4
+text = "Sekarang coba tekan \"Space\" saat di udara"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialoga6" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -135.0
+offset_top = -69.0
+offset_right = 136.0
+offset_bottom = -46.0
+theme_override_constants/outline_size = 4
+text = "Terimakasih atas jamurnya manis~"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="DeteksiPlayer" to="." method="_on_deteksi_player_body_entered"]
+[connection signal="body_exited" from="DeteksiPlayer" to="." method="_on_deteksi_player_body_exited"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

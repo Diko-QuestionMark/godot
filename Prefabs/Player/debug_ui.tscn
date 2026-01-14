@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqg7av1yia51u"]
+
+[ext_resource type="Script" uid="uid://djlxgx1g6h3ov" path="res://Prefabs/DebugUi/debug_ui.gd" id="1_vmh4p"]
+
+[node name="DebugUi" type="CanvasLayer"]
+script = ExtResource("1_vmh4p")
+
+[node name="Jump Available" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 159.0
+offset_bottom = 39.0
+theme_override_constants/outline_size = 4
+text = "jump_available = x"
+
+[node name="Can Double Jump" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 112.0
+offset_right = 159.0
+offset_bottom = 135.0
+theme_override_constants/outline_size = 4
+text = "double_jump = x"
+
+[node name="Near Ground" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 608.0
+offset_right = 159.0
+offset_bottom = 631.0
+theme_override_constants/outline_size = 4
+text = "near_ground = x"
+
+[node name="Double Jump Unlocked" type="Label" parent="."]
+modulate = Color(0.6953125, 0.7214966, 1, 1)
+offset_left = 904.0
+offset_top = 16.0
+offset_right = 1109.0
+offset_bottom = 39.0
+theme_override_constants/outline_size = 4
+text = "double_jump_unlocked = x"
+
+[node name="Buffer Jump Active" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 221.0
+offset_bottom = 71.0
+theme_override_constants/outline_size = 4
+text = "buffer_jump_active = x"
+
+[node name="Coyote Timer Active" type="Label" parent="."]
+modulate = Color(0.21875, 1, 0.798584, 1)
+offset_left = 16.0
+offset_top = 144.0
+offset_right = 221.0
+offset_bottom = 167.0
+theme_override_constants/outline_size = 4
+text = "coyote_time_active = x"
+
+[node name="After Jump" type="Label" parent="."]
+modulate = Color(1, 0.390625, 0.390625, 1)
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 221.0
+offset_bottom = 103.0
+theme_override_constants/outline_size = 4
+text = "after_jump = x"

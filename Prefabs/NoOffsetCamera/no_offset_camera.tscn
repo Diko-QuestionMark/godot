@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://2vp4v1powv34"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogv21"]
+size = Vector2(512, 639.75)
+
+[node name="NoOffsetCamera" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(256, 320.125)
+shape = SubResource("RectangleShape2D_ogv21")
+debug_color = Color(0.72156864, 0.70980394, 0.5058824, 0.16470589)

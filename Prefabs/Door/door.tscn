@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8mbo5wohinx5"]
+
+[ext_resource type="Script" uid="uid://cwd5yar4rsng8" path="res://Prefabs/Door/door.gd" id="1_hw8w0"]
+[ext_resource type="Texture2D" uid="uid://dgy02wispdw0r" path="res://Assets/Environments/SunnyLand/Props/door.png" id="2_d8wtq"]
+[ext_resource type="Texture2D" uid="uid://bp8bolnqmhiqi" path="res://Assets/Environments/SunnyLand/Props/door-opened.png" id="3_d8wtq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2u0h"]
+size = Vector2(22, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2u0h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d8wtq")
+}],
+"loop": true,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_d8wtq")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[node name="Door" type="Area2D"]
+script = ExtResource("1_hw8w0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_h2u0h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h2u0h")
+animation = &"close"
+autoplay = "close"
+frame_progress = 0.7089292
+
+[node name="Label" type="Label" parent="."]
+visible = false
+modulate = Color(0, 1, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -35.0
+offset_right = 23.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 13
+text = "Level 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

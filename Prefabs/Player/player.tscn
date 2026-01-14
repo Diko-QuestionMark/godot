@@ -1,0 +1,248 @@
+[gd_scene load_steps=23 format=3 uid="uid://bdb5kvgxefr3v"]
+
+[ext_resource type="Script" uid="uid://ci2qryppnkhsj" path="res://Prefabs/Player/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://bc8e2iovjec5l" path="res://Assets/Characters/Players/Foxy/Spritesheet.png" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://dqg7av1yia51u" path="res://Prefabs/Player/debug_ui.tscn" id="3_sysjd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivps1"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(33, 160, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(0, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(33, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(66, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(99, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(0, 160, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(0, 32, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(33, 32, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(66, 32, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(99, 32, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(132, 32, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvl01"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(165, 32, 33, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1jxqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivps1")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3pqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqtel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sweqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hs0m")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urp6f")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onrkg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jxqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw050")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b26j0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7ghd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvl01")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sysjd"]
+radius = 7.0
+height = 22.0
+
+[sub_resource type="Animation" id="Animation_4ntmi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PressF:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_gwnis"]
+resource_name = "pressf false"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PressF:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_btcbx"]
+resource_name = "pressf true"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PressF:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k53q1"]
+_data = {
+&"RESET": SubResource("Animation_4ntmi"),
+&"pressf false": SubResource("Animation_gwnis"),
+&"pressf true": SubResource("Animation_btcbx")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnwp3"]
+size = Vector2(8, 13)
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 9
+script = ExtResource("1_4flbx")
+double_jump_unclocked = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_1jxqw")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("CapsuleShape2D_sysjd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -21)
+zoom = Vector2(1.8, 1.8)
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+drag_vertical_enabled = true
+drag_bottom_margin = 0.0
+
+[node name="CoyoJumpTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="JumpBufferTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="PressF" type="Label" parent="."]
+visible = false
+offset_left = -10.0
+offset_top = -42.0
+offset_right = 13.0
+offset_bottom = -19.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "\"F\""
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_k53q1")
+}
+autoplay = "pressf false"
+
+[node name="DoubleJumpEffect" type="CPUParticles2D" parent="."]
+position = Vector2(0, -4)
+emitting = false
+amount = 10
+lifetime = 0.5
+one_shot = true
+preprocess = 0.05
+speed_scale = 0.5
+explosiveness = 0.95
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(13.24, 4)
+gravity = Vector2(0, 500)
+scale_amount_min = 4.0
+scale_amount_max = 5.0
+
+[node name="BufferJumpArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BufferJumpArea"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_hnwp3")
+debug_color = Color(0.03838848, 0.70196074, 0, 0.41960785)
+
+[node name="DebugUi" parent="." instance=ExtResource("3_sysjd")]
+visible = false
+
+[connection signal="timeout" from="CoyoJumpTimer" to="." method="Coyote_Timeout"]
+[connection signal="body_entered" from="BufferJumpArea" to="." method="_on_buffer_jump_area_body_entered"]
+[connection signal="body_exited" from="BufferJumpArea" to="." method="_on_buffer_jump_area_body_exited"]

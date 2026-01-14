@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://gr4qi83fjkxu"]
+
+[ext_resource type="Script" uid="uid://ch3pik1n3fbie" path="res://Prefabs/Uicanvas/UICanvas.gd" id="1_fjoof"]
+[ext_resource type="Texture2D" uid="uid://c864do0puioic" path="res://Assets/mushroom.png" id="2_uxsd0"]
+
+[node name="UICanvas" type="CanvasLayer"]
+script = ExtResource("1_fjoof")
+
+[node name="Mushroom" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.23921569)
+position = Vector2(1120, 616)
+scale = Vector2(2, 2)
+texture = ExtResource("2_uxsd0")
